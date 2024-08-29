@@ -23,26 +23,25 @@ Snort có bốn phần mềm bổ trợ yêu cầu phải cài đặt trước:
 * DAQ
 
 Khởi động máy ảo Ubuntu, mở cửa sổ dòng lệnh bắt đầu cài đặt
-> sudo apt-get update
->
-> sudo apt-get install -y build-essential
->
->sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
->
->sudo apt-get install -y bison flex
-
+```bash script
+sudo apt-get update
+sudo apt-get install -y build-essential
+sudo apt-get install -y libpcap-dev libpcre3-dev libdumbnet-dev
+sudo apt-get install -y bison flex
+```
 Tạo thư mục chứa mã nguồn Snort và các phần mềm liên quan:
-> mkdir ~/snort-src
->
->cd ~/snort-src/daq-2.0.7
->
->sudo ./configure
->
->sudo make
->
->sudo make install
->
->sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
+``` bash script
+mkdir ~/snort-src
+cd ~/snort-src
+sudo wget https://www.snort.org/downloads/snort/daq-2.0.7.tar.gz
+sudo tar -xvzf daq-2.0.6.tar.gz
+cd ~/snort-src/daq-2.0.7
+cd daq-2.0.6
+sudo ./configure
+sudo make
+sudo make install
+sudo apt-get install -y zlib1g-dev liblzma-dev openssl libssl-dev
+```
 
 ### **Bước 2. Cài đặt Snort**
 >Cd ~/snort/snort-src snort-2.9.17
